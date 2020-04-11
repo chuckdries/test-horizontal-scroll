@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial,
+    sans-serif;
+}
+
+.padding-block {
+  display: flex;
+  text-align: center;
+  font-size: 5vmax;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
+  color: #333;
+}
+
+.scroll-carousel {
+  background-color: #fff;
+}
+
+.sticky-box {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.transform-box {
+  display: flex;
+  will-change: transform;
+}
+/* gatsby-image inlining a correctly sized base64 should solve the image sizing for me */
+
+.box {
+  flex-shrink: 0;
+  /* need to hardcode box sizes, else images loading throws off calculations */
+  /* could be a job for imagesLoaded */
+  width: 70rem;
+  /* CQ: height calc here */
+  height: calc(100vh - 1rem);
+  margin: 0 2rem;
+}
+
+.box--narrower {
+  width: 20rem;
+}
+
+.img {
+  width: 100%;
+  /* CQ: height here vs .box? */
+  height: 33vh;
+  object-fit: cover;
+}
